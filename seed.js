@@ -1,7 +1,7 @@
 // import all models
-const { Book } = require('./models');
+const { Snippit } = require('./models');
 
-Book.create([
+Snippit.create([
     {
         title: 'Book 1',
         author: 'Author 1',
