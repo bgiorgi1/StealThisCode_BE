@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8000;
 
 // API
 const users = require('./api/users');
-const snippits = require('./api/snippits');
+const snippets = require('./api/snippets');
 
 // Middleware
 app.use(cors());
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/users', users);
-app.use('/api/snippits', snippits);
+app.use('/api/snippets', snippets);
 
 app.get('/*', (req, res) => {
     res.status(404).json({ message: 'Data not found' });

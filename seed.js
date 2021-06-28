@@ -1,38 +1,42 @@
 // import all models
-const { Snippit } = require('./models');
+const { Snippet } = require('./models');
 
-Snippit.create([
+Snippet.create([
     {
-        title: 'Book 1',
+        title: 'Code 1',
         author: 'Author 1',
-        pages: 199,
-        genre: 'Business',
-        price: 20,
-        isbn: '902391340123941203192'
+        body: 199,
+        image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+        language: Python,
+        dependencies: 'NPM',
+        userID: 123
     },
     {
-        title: 'Book 2',
+        title: 'Code 2',
         author: 'Author 2',
-        pages: 300,
-        genre: 'Software',
-        price: 100,
-        isbn: '9023913455523941203192'
+        body: 300,
+        image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+        language: Javascript,
+        dependencies: 'none',
+        userID: 456
     },
     {
-        title: 'Book 3',
+        title: 'Code 3',
         author: 'Author 3',
-        pages: 199,
-        genre: 'Business',
-        price: 20,
-        isbn: '9023913403343441203192'
+        body: 199,
+        image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+        language: CSS,
+        dependencies: 'None',
+        userID: 789
     },
     {
-        title: 'Book 4',
+        title: 'Code 4',
         author: 'Author 4',
-        pages: 333,
-        genre: 'Software',
-        price: 20,
-        isbn: '9023912123941203192'
+        body: 333,
+        image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+        language: HTML,
+        dependencies: 'Bootstrap',
+        userID: 1011
     }
 ], (err, results) => {
     console.log(results);

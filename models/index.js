@@ -21,10 +21,10 @@ db.on('error', (error) => {
 
 // Import all of your models
 const User = require('./User');
-const Snippit = require('./Snippit');
+const Snippet = require('./Snippet');
 
 // export all the models from this file
 module.exports = {
     User,
-    Snippit,
+    Snippet,
 }
