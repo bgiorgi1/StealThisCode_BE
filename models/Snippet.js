@@ -10,16 +10,15 @@ const snippetSchema = new Schema({
         type: String,
         required: true
     },
-    // language: {
-    //     type: String,
-    //     enum: ['HTML', 'CSS', 'Javascript', 'Python',],
-    //     required: true
-    // },
-    // userID: {
-    //     name: String,
-    //     timeStamp: Date,
-    //     required: true
-    // },
+    language: {
+        type: String,
+        // enum: ['HTML', 'CSS', 'Javascript', 'Python',],
+        required: true
+    },
+    userID: {
+        type: String,
+        required: true
+    },
     dependencies: String,
     image: String,
 })

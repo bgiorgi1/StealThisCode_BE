@@ -37,9 +37,10 @@ const show = async (req, res) => {
 
 const create = async (req, res) => {
     const { title, body, language, dependencies, image} = req.body;
+    const userID = req.user.id || ''
 
     try {
-        const newSnippet = await Snippet.create({ title, body, language, dependencies, image});
+        const newSnippet = await Snippet.create({ title, body, language, dependencies, image, userID});
         console.log('new snippet created', newSnippet);
         res.json({ snippet: newSnippet });
     } catch (error) {
@@ -70,7 +71,8 @@ const update = async (req, res) => {
         console.log(updatedSnippet); // { n: 1, nModified: 0, ok: 1 }
         console.log(snippet); // a book object 
 
-        res.redirect(`/api/snippets/${snippet.id}`);
+        // res.redirect(`/api/snippets/${snippet.id}`);
+        res.json (snippet)
 
     } catch (error) {
         console.log('Error inside of UPDATE route');
@@ -85,7 +87,9 @@ const deleteSnippet = async (req, res) => {
         console.log(id);
         const result = await Snippet.findByIdAndRemove(id);
         console.log(result);
-        res.redirect('/api/snippets');
+        // res.redirect('/api/snippets');
+        res.json(result)
+
     } catch (error) {
         console.log('inside of DELETE route');
         console.log(error);
