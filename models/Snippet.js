@@ -12,7 +12,6 @@ const snippetSchema = new Schema({
     },
     language: {
         type: [String],
-        // enum: ['HTML', 'CSS', 'Javascript', 'Python',],
         required: true
     },
     userID: {
