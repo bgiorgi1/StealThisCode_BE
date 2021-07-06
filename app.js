@@ -4,11 +4,25 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const passport = require('passport');
+const mongoose = require("mongoose"); // new
 const PORT = process.env.PORT || 8000;
 
 // //controllers
 // import users from './api/users';
 // import snippets from './api/snippets';
+
+//defining mongoose options
+// Connect DB
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("mongoDB is connected"))
+  .catch((err) => console.log(err)); 
+
 
 // API
 const users = require('./api/users');

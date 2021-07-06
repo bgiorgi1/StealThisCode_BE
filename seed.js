@@ -9,7 +9,7 @@ Snippet.create([
         image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
         language: Python,
         dependencies: 'NPM',
-        userID: 123
+      
     },
     {
         title: 'Code 2',
@@ -18,7 +18,7 @@ Snippet.create([
         image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
         language: Javascript,
         dependencies: 'none',
-        userID: 456
+      
     },
     {
         title: 'Code 3',

@@ -24,7 +24,10 @@ const userSchema = new Schema({
     date: {
         type: Date,
         default: Date.now()
-    }
+    },
+    cloudinary_id: {
+        type: String,
+      },
 })
 
 const User = mongoose.model('User', userSchema);
